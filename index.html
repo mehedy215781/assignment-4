@@ -20,22 +20,25 @@
          font-family: "Outfit", sans-serif;  
         }
      </style>
+
 </head>
+
+
 <body class=" bg-[#F8FAFC]">
    <header class="w-[80%] mx-auto pt-10 ">
      <h1 class="text-2xl text-[#002C5C] font-bold " >Job Application Tracker</h1>
     <section class="grid grid-cols-3 gap-2 pt-5 ">
       <div class="p-4 bg-white  rounded-sm border-1 border-gray-300 ">
         <p>Total</p>
-        <p id="Total" class="font-bold">8</p>
+        <p id="Total">0</p>
       </div>
       <div class="p-4  bg-white border-1 border-gray-300 rounded-sm">
         <p>Interview</p>
-        <p  id="Interview-count" class="text-[#10B981] font-bold">0</p>
+        <p  id="Interview-count">0</p>
       </div>
       <div class="p-4 bg-white  border-1 border-gray-300 rounded-sm">
         <p>Rejected</p>
-        <p id="Rejected-count" class="text-[#EF4444] font-bold">0</p>
+        <p id="Rejected-count">0</p>
       </div>
     </section>
    </header>
@@ -46,9 +49,9 @@
 
     <h2 class="text-2xl text-[#002C5C] font-bold ">Available Jobs</h2>
     <div class="pt-2">
-    <button id="btn-all" class="btn btn-primary px-10">All</button>
-    <button id="btn-Interview" class="btn btn-active bg-white">Interview</button>
-    <button id="btn-Rejected" class="btn btn-active bg-white">Rejected</button>
+    <button onclick="toggleStyle('btn-all')" id="btn-all" class="px-10 bg-blue-500 p-2 rounded-sm">All</button>
+    <button onclick="toggleStyle('btn-Interview')" id="btn-Interview" class="bg-white rounded-sm p-2">Interview</button>
+    <button onclick="toggleStyle('btn-Rejected')" id="btn-Rejected" class="bg-white rounded-sm p-2">Rejected</button>
     </div>
     <!-- card -->
      <section id="all-cards ">
@@ -257,5 +260,8 @@
    
 
    </main>
+
+
+   <script src="./style/script.js"></script>
 </body>
 </html>
