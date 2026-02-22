@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Tracker</title>
      <!-- tailwind and daisy -->
-   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 <!-- fonts -->
  <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,9 +41,9 @@
       </div>
     </section>
    </header>
-   <!-- main-section -->
+   
    <hr class="my-5 w-[80%] mx-auto  border-gray-300">
-
+<!-- main-section --> 
    <main class="w-[80%] mx-auto">
 
     <h2 class="text-2xl text-[#002C5C] font-bold ">Available Jobs</h2>
@@ -53,24 +52,30 @@
     <button onclick="toggleStyle('btn-Interview')" id="btn-Interview" class="bg-white rounded-sm p-2">Interview</button>
     <button onclick="toggleStyle('btn-Rejected')" id="btn-Rejected" class="bg-white rounded-sm p-2">Rejected</button>
     </div>
+
+<!-- filterd-section -->
+ <section id="filter-section">
+
+ </section>
+
     <!-- card -->
      <section id="all-cards ">
       <!-- card-1 -->
       <div class="card pt-5">
-        <div class="flex justify-between bg-white p-4">
+        <div class=" flex justify-between bg-white p-4">
           <div class="left space-y-4 ">
           <div>
-            <h4 class="text-2xl font-bold">Mobile First Corp</h4>
+            <h4 class="companyName text-2xl font-bold">Mobile First Corp</h4>
           <p class="Position text-[#64748B]">React Native Developer</p>
           </div>
           <p class="Type  text-[#64748B]">Remote• Full-time • $130,000 - $175,000</p>
-          <div>
-            <button class="progres bg-[#dee5f5] p-2 rounded-sm">Not Applied</button>
-          <p class="notes text-[323B49]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
-          </div>
+            <button class="progress bg-[#dee5f5] p-2 rounded-sm">Not Applied</button>
+            <p class="notes text-[323B49]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+          
         <div>
-           <button id="" class="btn btn-active bg-white"> <span class="text-[#10B981] font-bold">Interview</span></button>
-        <button id="" class="btn btn-active bg-white"> <span class="text-[#EF4444] font-bold"> Rejected</span></button>
+          <button class=" bg-white cursor-pointer border border-[#10B981] p-2 rounded-sm"><span class="text-[#10B981] font-bold">Interview</button>
+           
+      <button class=" bg-white border cursor-pointer border-[#10B981] p-2 rounded-sm"><span class="text-[#de3a3a] font-bold">Interview</button>
         </div>
       </div>
         <div class="right ">
@@ -85,17 +90,18 @@
         <div class="flex justify-between bg-white p-4">
           <div class="left space-y-4 ">
           <div>
-            <h4 class="text-2xl font-bold">WebFlow Agency</h4>
+            <h4 class="companyName text-2xl font-bold">WebFlow Agency</h4>
           <p class="Position text-[#64748B]">Web Designer & Developer</p>
           </div>
           <p class="Type  text-[#64748B]">Los Angeles, CA • Part-time • $80,000 - $120,000</p>
           <div>
-            <button class="progres bg-[#dee5f5] p-2 rounded-sm">Not Applied</button>
+            <button class="progress bg-[#dee5f5] p-2 rounded-sm">Not Applied</button>
           <p class="notes text-[323B49]">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends..</p>
           </div>
-        <div>
-           <button id="" class="btn btn-active bg-white"> <span class="text-[#10B981] font-bold">Interview</span></button>
-        <button id="" class="btn btn-active bg-white"> <span class="text-[#EF4444] font-bold"> Rejected</span></button>
+       <div>
+          <button class=" bg-white cursor-pointer border border-[#10B981] p-2 rounded-sm"><span class="text-[#10B981] font-bold">Interview</button>
+           
+      <button class=" bg-white border cursor-pointer border-[#10B981] p-2 rounded-sm"><span class="text-[#de3a3a] font-bold">Interview</button>
         </div>
       </div>
         <div class="right ">
@@ -107,20 +113,21 @@
       </div>
        <!-- card-3 -->
           <div class="card pt-5">
-        <div class="flex justify-between bg-white p-4">
+        <div class=" flex justify-between bg-white p-4">
           <div class="left space-y-4 ">
           <div>
-            <h4 class="text-2xl font-bold">DataViz Solutions</h4>
+            <h4 class="companyName text-2xl font-bold">DataViz Solutions</h4>
           <p class="Position text-[#64748B]">Data Visualization Specialist</p>
           </div>
           <p class="Type  text-[#64748B]">Boston, MA • Full-time • $125,000 - $165,000</p>
           <div>
-            <button class="progres bg-[#dee5f5] p-2 rounded-sm">Not Applied</button>
-          <p class="notes text-[323B49]">>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+            <button class="progress bg-[#dee5f5] p-2 rounded-sm">Not Applied</button>
+          <p class="notes text-[323B49]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
           </div>
         <div>
-           <button id="" class="btn btn-active bg-white"> <span class="text-[#10B981] font-bold">Interview</span></button>
-        <button id="" class="btn btn-active bg-white"> <span class="text-[#EF4444] font-bold"> Rejected</span></button>
+          <button class=" bg-white cursor-pointer border border-[#10B981] p-2 rounded-sm"><span class="text-[#10B981] font-bold">Interview</button>
+           
+      <button class=" bg-white border cursor-pointer border-[#10B981] p-2 rounded-sm"><span class="text-[#de3a3a] font-bold">Interview</button>
         </div>
       </div>
         <div class="right ">
@@ -132,20 +139,21 @@
       </div>
         <!-- card-4 -->
            <div class="card pt-5">
-        <div class="flex justify-between bg-white p-4">
+        <div class=" flex justify-between bg-white p-4">
           <div class="left space-y-4 ">
           <div>
-            <h4 class="text-2xl font-bold">CloudFirst Inc</h4>
+            <h4 class="companyName text-2xl font-bold">CloudFirst Inc</h4>
           <p class="Position text-[#64748B]">Backend Developer</p>
           </div>
           <p class="Type  text-[#64748B]">Seattle, WA • Full-time • $140,000 - $190,000</p>
           <div>
-            <button class="progres bg-[#dee5f5] p-2 rounded-sm">Not Applied</button>
+            <button class="progress bg-[#dee5f5] p-2 rounded-sm">Not Applied</button>
           <p class="notes text-[323B49]">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure..</p>
           </div>
-        <div>
-           <button id="" class="btn btn-active bg-white"> <span class="text-[#10B981] font-bold">Interview</span></button>
-        <button id="" class="btn btn-active bg-white"> <span class="text-[#EF4444] font-bold"> Rejected</span></button>
+       <div>
+          <button class=" bg-white cursor-pointer border border-[#10B981] p-2 rounded-sm"><span class="text-[#10B981] font-bold">Interview</button>
+           
+      <button class=" bg-white border cursor-pointer border-[#10B981] p-2 rounded-sm"><span class="text-[#de3a3a] font-bold">Interview</button>
         </div>
       </div>
         <div class="right ">
@@ -157,20 +165,21 @@
       </div>
          <!-- card-5 -->
             <div class="card pt-5">
-        <div class="flex justify-between bg-white p-4">
+        <div class=" flex justify-between bg-white p-4">
           <div class="left space-y-4 ">
           <div>
-            <h4 class="text-2xl font-bold">Innovation Labs</h4>
+            <h4 class="companyName text-2xl font-bold">Innovation Labs</h4>
           <p class="Position text-[#64748B]">UI/UX Engineer</p>
           </div>
           <p class="Type  text-[#64748B]">Austin, TX • Full-time • $110,000 - $150,000</p>
           <div>
-            <button class="progres bg-[#dee5f5] p-2 rounded-sm">Not Applied</button>
+            <button class="progress bg-[#dee5f5] p-2 rounded-sm">Not Applied</button>
           <p class="notes text-[323B49]">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
           </div>
         <div>
-           <button id="" class="btn btn-active bg-white"> <span class="text-[#10B981] font-bold">Interview</span></button>
-        <button id="" class="btn btn-active bg-white"> <span class="text-[#EF4444] font-bold"> Rejected</span></button>
+          <button class=" bg-white cursor-pointer border border-[#10B981] p-2 rounded-sm"><span class="text-[#10B981] font-bold">Interview</button>
+           
+      <button class=" bg-white border cursor-pointer border-[#10B981] p-2 rounded-sm"><span class="text-[#de3a3a] font-bold">Interview</button>
         </div>
       </div>
         <div class="right ">
@@ -182,20 +191,21 @@
       </div>
           <!-- card-6 -->
              <div class="card pt-5">
-        <div class="flex justify-between bg-white p-4">
+        <div class=" flex justify-between bg-white p-4">
           <div class="left space-y-4 ">
           <div>
-            <h4 class="text-2xl font-bold">MegaCorp Solutions</h4>
+            <h4 class="companyName text-2xl font-bold">MegaCorp Solutions</h4>
           <p class="Position text-[#64748B]">JavaScript Developer</p>
           </div>
           <p class="Type  text-[#64748B]">New York, NY • Full-time • $130,000 - $170,00</p>
           <div>
-            <button class="progres bg-[#dee5f5] p-2 rounded-sm">Not Applied</button>
+            <button class="progress bg-[#dee5f5] p-2 rounded-sm">Not Applied</button>
           <p class="notes text-[323B49]">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities..</p>
           </div>
-        <div>
-           <button id="" class="btn btn-active bg-white"> <span class="text-[#10B981] font-bold">Interview</span></button>
-        <button id="" class="btn btn-active bg-white"> <span class="text-[#EF4444] font-bold"> Rejected</span></button>
+       <div>
+          <button class=" bg-white cursor-pointer border border-[#10B981] p-2 rounded-sm"><span class="text-[#10B981] font-bold">Interview</button>
+           
+      <button class=" bg-white border cursor-pointer border-[#10B981] p-2 rounded-sm"><span class="text-[#de3a3a] font-bold">Interview</button>
         </div>
       </div>
         <div class="right ">
@@ -207,20 +217,21 @@
       </div>
            <!-- card-7 -->
               <div class="card pt-5">
-        <div class="flex justify-between bg-white p-4">
+        <div class=" flex justify-between bg-white p-4">
           <div class="left space-y-4 ">
           <div>
-            <h4 class="text-2xl font-bold">StartupXYZ</h4>
+            <h4 class="companyName text-2xl font-bold">StartupXYZ</h4>
           <p class="Position text-[#64748B]">Full Stack Engineer</p>
           </div>
           <p class="Type  text-[#64748B]">Remote• Full-time • $130,000 - $175,000</p>
           <div>
-            <button class="progres bg-[#dee5f5] p-2 rounded-sm">Not Applied</button>
+            <button class="progress bg-[#dee5f5] p-2 rounded-sm">Not Applied</button>
           <p class="notes text-[323B49]">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included..</p>
           </div>
-        <div>
-           <button id="" class="btn btn-active bg-white"> <span class="text-[#10B981] font-bold">Interview</span></button>
-        <button id="" class="btn btn-active bg-white"> <span class="text-[#EF4444] font-bold"> Rejected</span></button>
+       <div>
+          <button class=" bg-white cursor-pointer border border-[#10B981] p-2 rounded-sm"><span class="text-[#10B981] font-bold">Interview</button>
+           
+      <button class=" bg-white border cursor-pointer border-[#10B981] p-2 rounded-sm"><span class="text-[#de3a3a] font-bold">Interview</button>
         </div>
       </div>
         <div class="right ">
@@ -232,20 +243,21 @@
       </div>
             <!-- card-8 -->
                <div class="card pt-5">
-        <div class="flex justify-between bg-white p-4">
+        <div class=" flex justify-between bg-white p-4">
           <div class="left space-y-4 ">
           <div>
-            <h4 class="text-2xl font-bold">TechCorp Industries</h4>
+            <h4 class="companyName text-2xl font-bold">TechCorp Industries</h4>
           <p class="Position text-[#64748B]">Senior Frontend Developer</p>
           </div>
           <p class="Type  text-[#64748B]">San Francisco, CA Full-time • $130,000 - $175,000</p>
           <div>
-            <button class="progres bg-[#dee5f5] p-2 rounded-sm">Not Applied</button>
+            <button class="progress bg-[#dee5f5] p-2 rounded-sm">Not Applied</button>
           <p class="notes text-[323B49]">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects..</p>
           </div>
         <div>
-           <button id="" class="btn btn-active bg-white"> <span class="text-[#10B981] font-bold">Interview</span></button>
-        <button id="" class="btn btn-active bg-white"> <span class="text-[#EF4444] font-bold"> Rejected</span></button>
+          <button class=" bg-white cursor-pointer border border-[#10B981] p-2 rounded-sm"><span class="text-[#10B981] font-bold">Interview</button>
+           
+      <button class=" bg-white border cursor-pointer border-[#10B981] p-2 rounded-sm"><span class="text-[#de3a3a] font-bold">Interview</button>
         </div>
       </div>
         <div class="right ">
