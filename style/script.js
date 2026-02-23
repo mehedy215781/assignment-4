@@ -54,47 +54,6 @@ function toggleStyle(id){
     }
     
     const selected = document.getElementById(id)
-    console.log(selected);
+    // console.log(selected);
 }
 
-// toggle btn inside card//
-mainContainer.addEventListener('click',function(event){
-    // console.log(event.target.parentNode.parentNode.parentNode);
-    const parentNode = event.target.parentNode.parentNode.parentNode;
-    const companyName = parentNode.querySelector('.companyName').innerText
-    const Position = parentNode.querySelector('.Position').innerText
-    const Type = parentNode.querySelector('.Type').innerText
-    const progress = parentNode.querySelector('.progress').innerText
-    const notes = parentNode.querySelector('.notes').innerText
-    
-
-    const cardInfo ={
-        companyName,
-        Position,
-        Type,
-        progress,
-        notes
-    }
-    // console.log(cardInfo);
-    
-  const companyExist = InterviewList.find(item=> item.companyName == cardInfo.companyName)
-  if(!companyExist){
-    InterviewList.push(cardInfo)
-  }
-
- renderInterview()
-})
-
-function renderInterview(){
-  filterSection.innerHTML = ''
-
-  for(let Interview of InterviewList){
-    console.log(Interview);
-    let div = document.createElement('div');
-    div.className = 'flex justify-between bg-white p-4'
-    div.innerHTML =`
-    
-
-    `
-  }
-}
