@@ -120,7 +120,7 @@ console.log(event.target.classList.contains('interview'));
 
 
         calculateTotall()
-       renderInterview();
+    //    renderInterview();
 
     }else if (event.target.classList.contains('rejected')) {
         const parentNode = event.target.parentNode.parentNode.parentNode;
@@ -153,11 +153,11 @@ console.log(event.target.classList.contains('interview'));
         interviewList = interviewList.filter(item=> item.companyName != cardInfo.companyName)
 
         if(currentStatus == 'btn-interview'){
-            // renderInterview();
+            renderInterview();
         }
 
         calculateTotall()
-        renderRejected()
+        // renderRejected()
     }
      
 })
@@ -195,7 +195,7 @@ function renderInterview() {
         </div>
         
         `
-         filterSection.appendChild(div);
+        filterSection.appendChild(div);
     }
 }
 // rejected-render//
