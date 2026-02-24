@@ -189,22 +189,23 @@ function renderInterview() {
         div.className = 'flex justify-between bg-white border-2 border-gray-400 rounded-lg p-5 mt-4 ';
         div.innerHTML = `
             <div class="left space-y-4 ">
-          <div>
-            <h4 class="companyName text-2xl font-bold">${interview.companyName}</h4>
-          <p class="Position text-[#64748B]">${interview.Position}</p>
+          <div class="space-y-4">
+            <h4 class="companyName text-2xl font-bold">Mobile First Corp</h4>
+            <p class="Position text-[#64748B]">React Native Developer</p>
+
+            <p class="Type text-[#64748B]">Remote• Full-time • $130,000 - $175,000</p>
+            <button class="progress bg-[#dee5f5] p-2 rounded-sm">Not Applied</button>
+            <p class="notes text-[323B49]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
           </div>
-          <p class="Type  text-[#64748B]">${interview.Type}</p>
-            <button class="progress bg-[#dee5f5] p-2 rounded-sm">${interview.progress}</button>
-            <p class="notes text-[323B49]">${interview.notes}</p>
           
-            <div>
+          <div>
           <button  class=" interview bg-white cursor-pointer text-[#10B981] font-bold border  border-[#10B981] p-2 rounded-sm">Interview</button>
            
-       <button  class=" rejected bg-white text-[#EF4444] font-bold  border cursor-pointer border-[#10B981] p-2 rounded-sm">Rejected</button>
+          <button  class=" rejected bg-white text-[#EF4444] font-bold border border cursor-pointer border-[#10B981] p-2 rounded-sm">Rejected</button>
         </div>
       </div>
         <div class="right ">
-          <a class="border-1 border-gray-300 p-2 rounded-[50%]" href=""><i class="fa-solid fa-trash-can"></i></a>
+          <button class="btn-delete px-4 py-2 hover:scale-105 transition duration-300 cursor-pointer"><i class="fa-solid fa-trash"></i></button>
           
         </div>
         
@@ -229,25 +230,26 @@ function renderRejected() {
         let div = document.createElement('div');
         div.className = 'flex justify-between bg-white rounded-lg border-2 border-gray-400 p-5 mt-4';
         div.innerHTML = `
-            <div class="left space-y-4">
-                <div>
-                    <h4 class="companyName text-2xl font-bold">${reject.companyName}</h4>
-                    <p class="Position text-[#64748B]">${reject.Position}</p>
-                </div>
-                <p class="Type text-[#64748B]">${reject.Type}</p>
-                <button class="progress bg-[#dee5f5] p-2 rounded-sm">${reject.progress}</button>
-                <p class="notes text-[323B49]">${reject.notes}</p>
-                   <div>
+             <div class="left space-y-4 ">
+          <div class="space-y-4">
+            <h4 class="companyName text-2xl font-bold">Mobile First Corp</h4>
+            <p class="Position text-[#64748B]">React Native Developer</p>
+
+            <p class="Type text-[#64748B]">Remote• Full-time • $130,000 - $175,000</p>
+            <button class="progress bg-[#dee5f5] p-2 rounded-sm">Not Applied</button>
+            <p class="notes text-[323B49]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+          </div>
+          
+          <div>
           <button  class=" interview bg-white cursor-pointer text-[#10B981] font-bold border  border-[#10B981] p-2 rounded-sm">Interview</button>
            
-       <button  class=" rejected bg-white text-[#EF4444] font-bold  border cursor-pointer border-[#10B981] p-2 rounded-sm">Rejected</button>
+          <button  class=" rejected bg-white text-[#EF4444] font-bold border border cursor-pointer border-[#10B981] p-2 rounded-sm">Rejected</button>
         </div>
-            </div>
-            <div class="right">
-                <a class="border-1 border-gray-300 p-2 rounded-[50%]" href="">
-                    <i class="fa-solid fa-trash-can"></i>
-                </a>
-            </div>
+      </div>
+        <div class="right ">
+          <button class="btn-delete px-4 py-2 hover:scale-105 transition duration-300 cursor-pointer"><i class="fa-solid fa-trash"></i></button>
+          
+        </div>
         `;
         filterSection.appendChild(div);
     }
@@ -255,10 +257,8 @@ function renderRejected() {
 
 
 mainContainer.addEventListener('click', function (event) {
-    // console.log("delete-btn Clicked");
-    // const deleteBtn = event.target.closest('.btn-delete');
 
-    // const Delet =event.target.closest('.btn-delete');
+    
 
     if (event.target.closest('.btn-delete')) {
 
