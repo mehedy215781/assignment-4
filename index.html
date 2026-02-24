@@ -44,14 +44,22 @@
    
    <hr class="my-5 w-[80%] mx-auto  border-gray-300">
 <!-- main-section --> 
-   <main class="w-[80%] mx-auto">
+   <main class=" w-[80%] mx-auto">
 
     <h2 class="text-2xl text-[#002C5C] font-bold ">Available Jobs</h2>
-    <div class="pt-2">
+    <div class="flex justify-between">
+      <div class="pt-2">
     <button onclick="toggleStyle('btn-all')" id="btn-all" class="px-10 bg-blue-500 p-2 rounded-sm">All</button>
     <button onclick="toggleStyle('btn-interview')" id="btn-interview" class="bg-white rounded-sm p-2">Interview</button>
     <button onclick="toggleStyle('btn-rejected')" id="btn-rejected" class="bg-white rounded-sm p-2">Rejected</button>
+    
     </div>
+    <div>
+    <p id="total-job" class="font-bold">0</p>
+    </div>
+    </div>
+    
+  
 
 <!-- filterd-section -->
  <section id="filter-section" class="hidden flex flex-col gap-4 mb-4 ">
@@ -71,22 +79,23 @@
       <div class="card pt-5">
         <div class=" flex justify-between border-2 border-gray-400 rounded-lg bg-white p-4">
           <div class="left space-y-4 ">
-          <div>
+          <div class="space-y-4">
             <h4 class="companyName text-2xl font-bold">Mobile First Corp</h4>
-          <p class="Position text-[#64748B]">React Native Developer</p>
-          </div>
-          <p class="Type  text-[#64748B]">Remote• Full-time • $130,000 - $175,000</p>
+            <p class="Position text-[#64748B]">React Native Developer</p>
+
+            <p class="Type text-[#64748B]">Remote• Full-time • $130,000 - $175,000</p>
             <button class="progress bg-[#dee5f5] p-2 rounded-sm">Not Applied</button>
             <p class="notes text-[323B49]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+          </div>
           
           <div>
           <button  class=" interview bg-white cursor-pointer text-[#10B981] font-bold border  border-[#10B981] p-2 rounded-sm">Interview</button>
            
-       <button  class=" rejected bg-white text-[#EF4444] font-bold border border cursor-pointer border-[#10B981] p-2 rounded-sm">Rejected</button>
+          <button  class=" rejected bg-white text-[#EF4444] font-bold border border cursor-pointer border-[#10B981] p-2 rounded-sm">Rejected</button>
         </div>
       </div>
         <div class="right ">
-          <a class="border-1 border-gray-300 p-2 rounded-[50%]" href=""><i class="fa-solid fa-trash-can"></i></a>
+          <button class="btn-delete px-4 py-2 hover:scale-105 transition duration-300 cursor-pointer"><i class="fa-solid fa-trash"></i></button>
           
         </div>
         </div>
@@ -112,15 +121,15 @@
         </div>
       </div>
         <div class="right ">
-          <a class="border-1 border-gray-300 p-2 rounded-[50%]" href=""><i class="fa-solid fa-trash-can"></i></a>
+           <button class="btn-delete px-4 py-2 hover:scale-105 transition duration-300 cursor-pointer"><i class="fa-solid fa-trash"></i></button>
           
         </div>
         </div>
         
       </div>
        <!-- card-3 -->
-          <div class="card pt-5">
-        <div class=" flex justify-between bg-white  border-2 border-gray-400 rounded-lg p-4">
+        <div class="card pt-5">
+          <div class=" flex justify-between bg-white  border-2 border-gray-400 rounded-lg p-4">
           <div class="left space-y-4 ">
           <div>
             <h4 class="companyName text-2xl font-bold">DataViz Solutions</h4>
@@ -138,7 +147,7 @@
         </div>
       </div>
         <div class="right ">
-          <a class="border-1 border-gray-300 p-2 rounded-[50%]" href=""><i class="fa-solid fa-trash-can"></i></a>
+           <button class="btn-delete px-4 py-2 hover:scale-105 transition duration-300 cursor-pointer"><i class="fa-solid fa-trash"></i></button>
           
         </div>
         </div>
@@ -164,7 +173,7 @@
         </div>
       </div>
         <div class="right ">
-          <a class="border-1 border-gray-300 p-2 rounded-[50%]" href=""><i class="fa-solid fa-trash-can"></i></a>
+           <button class="btn-delete px-4 py-2 hover:scale-105 transition duration-300 cursor-pointer"><i class="fa-solid fa-trash"></i></button>
           
         </div>
         </div>
@@ -190,7 +199,7 @@
         </div>
       </div>
         <div class="right ">
-          <a class="border-1 border-gray-300 p-2 rounded-[50%]" href=""><i class="fa-solid fa-trash-can"></i></a>
+           <button class="btn-delete px-4 py-2 hover:scale-105 transition duration-300 cursor-pointer"><i class="fa-solid fa-trash"></i></button>
           
         </div>
         </div>
@@ -216,7 +225,7 @@
         </div>
       </div>
         <div class="right ">
-          <a class="border-1 border-gray-300 p-2 rounded-[50%]" href=""><i class="fa-solid fa-trash-can"></i></a>
+           <button class="btn-delete px-4 py-2 hover:scale-105 transition duration-300 cursor-pointer"><i class="fa-solid fa-trash"></i></button>
           
         </div>
         </div>
@@ -242,7 +251,7 @@
         </div>
       </div>
         <div class="right ">
-          <a class="border-1 border-gray-300 p-2 rounded-[50%]" href=""><i class="fa-solid fa-trash-can"></i></a>
+           <button class="btn-delete px-4 py-2 hover:scale-105 transition duration-300 cursor-pointer"><i class="fa-solid fa-trash"></i></button>
           
         </div>
         </div>
@@ -268,7 +277,7 @@
         </div>
       </div>
         <div class="right ">
-          <a class="border-1 border-gray-300 p-2 rounded-[50%]" href=""><i class="fa-solid fa-trash-can"></i></a>
+           <button class="btn-delete px-4 py-2 hover:scale-105 transition duration-300 cursor-pointer"><i class="fa-solid fa-trash"></i></button>
           
         </div>
         </div>

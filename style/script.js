@@ -9,7 +9,9 @@ let rejectedCount = document.getElementById('Rejected-count');
 
 const allCardSections = document.getElementById('all-cards ');
 const emptyMassage =document.getElementById('empty-Massage')
-// console.log(allCardSections.children.length);
+const totalJob = document.getElementById('total-job');
+totalJob.innerText
+
 
 
 // InterviewList.push({name:'compnay'},{name:'compnay'}) test
@@ -74,13 +76,15 @@ function toggleStyle(id) {
     
 }
 
-// calculate ///
+// calculate //
 
 function calculateTotall() {
     total.innerText = allCardSections.children.length;
     interviewCount.innerText = interviewList.length;
     rejectedCount.innerText = rejectedList.length;
+      
 }
+
 calculateTotall()
 
 mainContainer.addEventListener('click', function (event) {
@@ -133,6 +137,7 @@ console.log(event.target.classList.contains('interview'));
         const Type = parentNode.querySelector('.Type').innerText
         const progress = parentNode.querySelector('.progress').innerText
         const notes = parentNode.querySelector('.notes').innerText
+
 
         parentNode.querySelector('.progress').innerText = 'Rejected'
 
@@ -188,7 +193,7 @@ function renderInterview() {
             <h4 class="companyName text-2xl font-bold">${interview.companyName}</h4>
           <p class="Position text-[#64748B]">${interview.Position}</p>
           </div>
-          <p class="Type  text-[#64748B]">Remote• Full-time • $130,000 - $175,000</p>
+          <p class="Type  text-[#64748B]">${interview.Type}</p>
             <button class="progress bg-[#dee5f5] p-2 rounded-sm">${interview.progress}</button>
             <p class="notes text-[323B49]">${interview.notes}</p>
           
@@ -229,7 +234,7 @@ function renderRejected() {
                     <h4 class="companyName text-2xl font-bold">${reject.companyName}</h4>
                     <p class="Position text-[#64748B]">${reject.Position}</p>
                 </div>
-                <p class="Type text-[#64748B]">Remote• Full-time • $130,000 - $175,000</p>
+                <p class="Type text-[#64748B]">${reject.Type}</p>
                 <button class="progress bg-[#dee5f5] p-2 rounded-sm">${reject.progress}</button>
                 <p class="notes text-[323B49]">${reject.notes}</p>
                    <div>
@@ -248,4 +253,27 @@ function renderRejected() {
     }
 }
 
+
+mainContainer.addEventListener('click', function (event) {
+    // console.log("delete-btn Clicked");
+    // const deleteBtn = event.target.closest('.btn-delete');
+
+    // const Delet =event.target.closest('.btn-delete');
+
+    if (event.target.closest('.btn-delete')) {
+
+        
+        // const parentNode = event.target.parentNode.parentNode.parentNode  ;
+        const parentNode= event.target.closest('.card');
+
+        // console.log("delete-btn Clicked",parentNode)
+
+        //  console.log("delete-btn Clicked",parentNode)
+
+        parentNode.remove();
+
+      calculateTotall()
+
+    }
+});
 
