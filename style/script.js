@@ -8,6 +8,7 @@ let rejectedCount = document.getElementById('Rejected-count');
 // console.log(interviewCount);
 
 const allCardSections = document.getElementById('all-cards ');
+const emptyMassage =document.getElementById('empty-Massage')
 // console.log(allCardSections.children.length);
 
 
@@ -43,6 +44,7 @@ function toggleStyle(id) {
     if (id === 'btn-all') {
         allBtn.classList.remove('bg-gray-300', 'text-black');
         allBtn.classList.add('bg-blue-500', 'text-white');
+       
     } else if (id === 'btn-interview') {
         interviewBtn.classList.remove('bg-gray-300', 'text-black');
         interviewBtn.classList.add('bg-blue-500', 'text-white');
@@ -61,9 +63,9 @@ function toggleStyle(id) {
         filterSection.classList.remove('hidden')
         renderInterview()
     }else if(id == 'btn-all'){
-
-     allCardSections.classList.remove('hidden');
-    filterSection.classList.add('hidden')
+    allCardSections.classList.remove('hidden');
+    filterSection.classList.add('hidden');
+    emptyMassage.classList.add('hidden');
     } else if(id == 'btn-rejected'){
         allCardSections.classList.add('hidden');
         filterSection.classList.remove('hidden')
@@ -114,12 +116,13 @@ console.log(event.target.classList.contains('interview'));
 
         rejectedList =rejectedList.filter(item=> item.companyName != cardInfo.companyName)
         
-      if(currentStatus == 'btn-interview'){
-            renderInterview();
+      if(currentStatus == 'btn-rejected'){
+            renderRejected();
         }
 
 
         calculateTotall()
+
     //    renderInterview();
 
     }else if (event.target.classList.contains('rejected')) {
@@ -147,7 +150,6 @@ console.log(event.target.classList.contains('interview'));
 
         if (!companyExist) {
             rejectedList.push(cardInfo);
-
         }
 
         interviewList = interviewList.filter(item=> item.companyName != cardInfo.companyName)
@@ -157,7 +159,7 @@ console.log(event.target.classList.contains('interview'));
         }
 
         calculateTotall()
-        // renderRejected()
+       
     }
      
 })
@@ -167,12 +169,19 @@ const filterSection = document.getElementById('filter-section');
 function renderInterview() {
 
     filterSection.innerHTML = '';
+    // empty massage hide//
+    if(interviewList.length === 0){
+        emptyMassage.classList.remove('hidden');
+        return;
+    }else{
+         emptyMassage.classList.add('hidden')
+        }
 
     for (let interview of interviewList) {
         console.log(interview);
 
         let div = document.createElement('div');
-        div.className = 'flex justify-between bg-white p-4';
+        div.className = 'flex justify-between bg-white border-2 border-gray-400 rounded-lg p-5 mt-4 ';
         div.innerHTML = `
             <div class="left space-y-4 ">
           <div>
@@ -202,12 +211,18 @@ function renderInterview() {
 
 function renderRejected() {
     filterSection.innerHTML = '';
+     if(rejectedList.length === 0){
+        emptyMassage.classList.remove('hidden');
+        return;
+    }else{
+         emptyMassage.classList.add('hidden')
+        }
 
     for (let reject of rejectedList) {
         console.log(reject); 
 
         let div = document.createElement('div');
-        div.className = 'flex justify-between bg-white p-4';
+        div.className = 'flex justify-between bg-white rounded-lg border-2 border-gray-400 p-5 mt-4';
         div.innerHTML = `
             <div class="left space-y-4">
                 <div>
@@ -232,3 +247,5 @@ function renderRejected() {
         filterSection.appendChild(div);
     }
 }
+
+
