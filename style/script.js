@@ -183,10 +183,10 @@ function renderInterview() {
             <button class="progress bg-[#dee5f5] p-2 rounded-sm">${interview.progress}</button>
             <p class="notes text-[323B49]">${interview.notes}</p>
           
-           <div>
-          <button  class=" interview bg-white cursor-pointer border  border-[#10B981] p-2 rounded-sm">Interview</button>
+            <div>
+          <button  class=" interview bg-white cursor-pointer text-[#10B981] font-bold border  border-[#10B981] p-2 rounded-sm">Interview</button>
            
-       <button  class=" rejected bg-white border cursor-pointer border-[#10B981] p-2 rounded-sm">Rejected</button>
+       <button  class=" rejected bg-white text-[#EF4444] font-bold  border cursor-pointer border-[#10B981] p-2 rounded-sm">Rejected</button>
         </div>
       </div>
         <div class="right ">
@@ -217,10 +217,11 @@ function renderRejected() {
                 <p class="Type text-[#64748B]">Remote• Full-time • $130,000 - $175,000</p>
                 <button class="progress bg-[#dee5f5] p-2 rounded-sm">${reject.progress}</button>
                 <p class="notes text-[323B49]">${reject.notes}</p>
-                <div>
-                    <button class="interview bg-white cursor-pointer border border-[#10B981] p-2 rounded-sm">Interview</button>
-                    <button class="rejected bg-white border cursor-pointer border-[#10B981] p-2 rounded-sm">Rejected</button>
-                </div>
+                   <div>
+          <button  class=" interview bg-white cursor-pointer text-[#10B981] font-bold border  border-[#10B981] p-2 rounded-sm">Interview</button>
+           
+       <button  class=" rejected bg-white text-[#EF4444] font-bold  border cursor-pointer border-[#10B981] p-2 rounded-sm">Rejected</button>
+        </div>
             </div>
             <div class="right">
                 <a class="border-1 border-gray-300 p-2 rounded-[50%]" href="">
